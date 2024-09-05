@@ -29,7 +29,7 @@
         .bgimg-1 {
             background-position: center;
             background-size: cover;
-            background-image: url("https://www.w3schools.com/w3images/mac.jpg");
+            background-image: url("https://files.myuwell.com/uwell/ow-content-text-picture/vape%20pod%20systems-20240528143523941.jpg");
             min-height: 100%;
         }
 
@@ -44,7 +44,8 @@
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar w3-white w3-card" id="myNavbar">
-            <a href="#home" class="w3-bar-item w3-button w3-wide">PUNTO POD</a>
+            <a href="#home" class="w3-bar-item w3-button w3-wide"><img class="w3-image w3-round-large"
+                    src="http://localhost:8000/storage/captura.png" alt="nosotros" width="70" height="39"></a>
             <!-- Right-sided navbar links -->
             <div class="w3-right w3-hide-small">
                 <a href="#about" class="w3-bar-item w3-button">NOSOTROS</a>
@@ -78,7 +79,8 @@
             <span class="w3-jumbo w3-hide-small">Descubre la mejor experiencia en pods</span><br>
             <span class="w3-xxlarge w3-hide-large w3-hide-medium">Descubre la mejor experiencia</span><br>
             <span class="w3-large">Sabores intensos, calidad premium y máxima comodidad.</span>
-            <p><a href="#about"
+            <p><a href="https://api.whatsapp.com/send/?phone=595991192301&text=Hola,%20vengo%20de%20la%20web%20y%20estoy%20interesado&type=phone_number&app_absent=0"
+                    target="_blank"
                     class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">COMPRAR
                     AHORA</a></p>
         </div>
@@ -101,25 +103,27 @@
                     para convertirnos en tu tienda de confianza para todas tus necesidades de vapeo.</p>
             </div>
             <div class="w3-col m6">
-                <img class="w3-image w3-round-large" src="https://www.w3schools.com/w3images/phone_buildings.jpg"
-                    alt="Buildings" width="700" height="394">
+                <img class="w3-image w3-round-large" src="http://localhost:8000/storage/captura.png" alt="nosotros"
+                    width="700" height="394">
             </div>
         </div>
     </div>
 
     <!-- Productos -->
-    <div class="w3-container" style="padding:128px 16px" id="team">
+    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="team">
         <h3 class="w3-center">PRODUCTOS</h3>
         <div class="w3-row-padding" style="margin-top:64px">
             @foreach ($products as $product)
                 <div class="w3-col l2 s6 w3-margin-bottom">
-                        <div class="w3-container">
-                            <img src="http://localhost:8000/storage/{{ $product->image }}" alt="{{ $product->name }}"
-                                style="width:100%">
-                            <p>{{ $product->name }}<br><b>{{ $product->price }} Gs.</b></p>
-                            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i>
-                                    Comprar</button></p>
-                        </div>
+                    <div class="w3-container">
+                        <img src="http://localhost:8000/storage/{{ $product->image }}" alt="{{ $product->name }}"
+                            style="width:100%">
+                        <p>{{ $product->name }}<br><b>{{ $product->price }} Gs.</b></p>
+                        <p><a href="https://api.whatsapp.com/send/?phone=595991192301&text=Hola,%20vengo%20de%20la%20web%20y%20estoy%20interesado%20en%20el%20producto:%20%20{{ $product->name }}%20&type=phone_number&app_absent=0"
+                                target="_blank"
+                                class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-hover-opacity-off w3-block">COMPRAR</a>
+                        </p>
+                    </div>
                 </div>
             @endforeach
         </div>
@@ -131,35 +135,24 @@
 
         <div class="w3-row-padding w3-center" style="margin-top:64px">
             <div class="w3-third">
-                <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+                <i class="fa fa-check-circle w3-margin-bottom w3-jumbo w3-center"></i>
                 <p class="w3-large">Calidad Superior</p>
                 <p>Solo trabajamos con los mejores materiales y sabores para garantizar una experiencia de vapeo única.
                 </p>
             </div>
             <div class="w3-third">
-                <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+                <i class="fa fa-plus-circle w3-margin-bottom w3-jumbo"></i>
                 <p class="w3-large">Variedad de Sabores</p>
                 <p>Desde sabores frutales hasta mentolados, ofrecemos una amplia gama de opciones para todos los gustos.
                 </p>
             </div>
             <div class="w3-third">
-                <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+                <i class="fa fa-handshake-o w3-margin-bottom w3-jumbo"></i>
                 <p class="w3-large">Servicio al Cliente</p>
                 <p>Nuestro equipo está siempre disponible para ayudarte con cualquier duda o inquietud.</p>
             </div>
         </div>
     </div>
-
-    <!-- Modal for full size images on click-->
-    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-        <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright"
-            title="Close Modal Image">×</span>
-        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-            <img id="img01" class="w3-image">
-            <p id="caption" class="w3-opacity w3-large"></p>
-        </div>
-    </div>
-
 
     <!-- Contacto -->
     <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
@@ -201,8 +194,8 @@
             <i class="fa fa-facebook-official w3-hover-opacity"></i>
             <i class="fa fa-instagram w3-hover-opacity"></i>
         </div>
-        <p>Desarrollado por <a href="#" title="Edgar Franco" target="_blank"
-                class="w3-hover-text-green">Edgar Franco</a></p>
+        <p>Desarrollado por <a href="#" title="Edgar Franco" target="_blank" class="w3-hover-text-green">Edgar
+                Franco</a></p>
     </footer>
 
     <script>
