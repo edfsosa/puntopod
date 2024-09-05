@@ -29,7 +29,7 @@
         .bgimg-1 {
             background-position: center;
             background-size: cover;
-            background-image: url("https://files.myuwell.com/uwell/ow-content-text-picture/vape%20pod%20systems-20240528143523941.jpg");
+            background-image: url("http://localhost:8000/storage/pods-header2.jpg");
             min-height: 100%;
         }
 
@@ -78,7 +78,6 @@
         <div class="w3-display-left w3-text-white" style="padding:48px">
             <span class="w3-jumbo w3-hide-small">Descubre la mejor experiencia en pods</span><br>
             <span class="w3-xxlarge w3-hide-large w3-hide-medium">Descubre la mejor experiencia</span><br>
-            <span class="w3-large">Sabores intensos, calidad premium y máxima comodidad.</span>
             <p><a href="https://api.whatsapp.com/send/?phone=595991192301&text=Hola,%20vengo%20de%20la%20web%20y%20estoy%20interesado&type=phone_number&app_absent=0"
                     target="_blank"
                     class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">COMPRAR
