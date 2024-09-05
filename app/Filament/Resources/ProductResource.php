@@ -26,7 +26,10 @@ class ProductResource extends Resource
                 Forms\Components\TextInput::make('name')->required(),
                 Forms\Components\Textarea::make('description'),
                 Forms\Components\TextInput::make('price')->numeric()->required(),
-                Forms\Components\FileUpload::make('image')->image()->imageEditor()
+                Forms\Components\FileUpload::make('image')->image()->imageEditor()->imageResizeMode('cover')
+                ->imageCropAspectRatio('4:5')
+                ->imageResizeTargetWidth('400')
+                ->imageResizeTargetHeight('500')
             ]);
     }
 

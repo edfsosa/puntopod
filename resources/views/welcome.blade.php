@@ -112,16 +112,14 @@
         <h3 class="w3-center">PRODUCTOS</h3>
         <div class="w3-row-padding" style="margin-top:64px">
             @foreach ($products as $product)
-                <div class="w3-col l3 m6 w3-margin-bottom">
-                    <div class="w3-card">
+                <div class="w3-col l2 s6 w3-margin-bottom">
                         <div class="w3-container">
                             <img src="http://localhost:8000/storage/{{ $product->image }}" alt="{{ $product->name }}"
-                                style="width:80%">
+                                style="width:100%">
                             <p>{{ $product->name }}<br><b>{{ $product->price }} Gs.</b></p>
                             <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i>
                                     Comprar</button></p>
                         </div>
-                    </div>
                 </div>
             @endforeach
         </div>
